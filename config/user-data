@@ -1,0 +1,29 @@
+#cloud-config
+password: pass
+chpasswd: { expire: False }
+ssh_pwauth: True
+
+package_update: true
+packages:
+  - zsh
+  - git
+
+users:
+- default
+- name: florian
+  gecos: Florian Wilhelm
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  primary_group: florian
+  groups: users
+  ssh_import_id:
+    - gh:fwilhe2
+  lock_passwd: true
+  shell: /usr/bin/zsh
+
+runcmd:
+- [ ls, -l, / ]
+- [ sh, -xc, "echo $(date) ': hello world!'" ]
+- [ sh, -c, echo "=========hello world'=========" ]
+- id
+- ls -l /root
+- [ wget, "http://example.org", -O, /tmp/index.html ]

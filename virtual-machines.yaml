@@ -1,0 +1,5 @@
+meta:
+  foo: bar
+machines:
+  - name: Fedora Cloud
+    image: Fedora-Cloud-Base-36-1.5.x86_64.raw

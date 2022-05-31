@@ -2,8 +2,11 @@
 password: pass
 chpasswd: { expire: False }
 ssh_pwauth: True
-
+ssh_import_id:
+  - gh:fwilhe2
+timezone: Europe/Berlin
 package_update: true
+package_upgrade: true
 packages:
   - zsh
   - git
@@ -26,4 +29,3 @@ runcmd:
 - [ sh, -c, echo "=========hello world'=========" ]
 - id
 - ls -l /root
-- [ wget, "http://example.org", -O, /tmp/index.html ]

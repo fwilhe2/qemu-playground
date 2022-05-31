@@ -82,7 +82,8 @@ if __name__ == '__main__':
         'if=pflash,format=raw,readonly=on,file=/usr/share/OVMF/OVMF_CODE.fd',
         '-boot', 'order=c,splash-time=0,menu=on', '-drive',
         f'file={disk_image},format={image_format(disk_image)},if=virtio',
-        '-device', 'virtio-rng-pci', '-net', 'nic', '-net', 'user', '-device',
-        'virtio-vga', '-device', 'virtio-keyboard-pci', '-device',
-        'virtio-mouse-pci', '-display', 'sdl', '-cdrom', 'config/seed.iso'
+        '-device', 'virtio-rng-pci', '-net', 'nic', '-net',
+        'user,hostfwd=tcp::2222-:22', '-device', 'virtio-vga', '-device',
+        'virtio-keyboard-pci', '-device', 'virtio-mouse-pci', '-display',
+        'sdl', '-cdrom', 'config/seed.iso'
     ])

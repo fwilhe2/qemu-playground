@@ -1,0 +1,7 @@
+images:
+- location: "https://repo.almalinux.org/almalinux/9.4/cloud/x86_64/images/AlmaLinux-9-GenericCloud-9.4-20240507.x86_64.qcow2"
+  arch: "x86_64"
+  digest: "sha256:bff0885c804c01fff8aac4b70c9ca4f04e8c119f9ee102043838f33e06f58390"
+- location: "https://repo.almalinux.org/almalinux/9.4/cloud/aarch64/images/AlmaLinux-9-GenericCloud-9.4-20240507.aarch64.qcow2"
+  arch: "aarch64"
+  digest: "sha256:75b2e68f6aaa41c039274595ff15968201b7201a7f2f03b109af691f2d3687a1"
